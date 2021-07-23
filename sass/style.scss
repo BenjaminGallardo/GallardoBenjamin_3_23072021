@@ -13,10 +13,105 @@
     src: url('../polices/Roboto-Regular.ttf') format('truetype');
 }
 
-img
+body
 {
- width: 200px;
+    font-family: $font-text;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    box-shadow: 0px 0px 10px #867c7c;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.localisation {
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 1em 0em 1em 0em;
+    
+        &__place {
+            font-weight: bold;
+        }
+
+        &__icon {
+            position: relative;
+            right: 1em;
+        }
+    }
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em 0em 2em 0em;
+    background-color: #f6f6f6;
+
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        &__text {
+            padding: 1em 0em 1em 0em;
+            color: #545454;
+        }
+
+        &__btn {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 3em;
+            background-color: $color-primary;
+            padding: 1em 1em 1em 1em ;
+            cursor: pointer;
+            @include btn-shadow;
+        }
+}
+
+.functioning {
+    padding: 1em 1em 1em 1em;
+    
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    &__listline {
+       font-weight: bold;
+       margin: 1em 0em 1em 0em;
+       padding: 2em 1em 2em 1em;
+       border-radius: 1em 1em 1em 1em;
+       background-color: #f6f6f6;
+       @include btn-shadow;
+
+    }
+
+    &__icon {
+        padding: 0em 1em 0em 0.5em;
+        color: #545454;
+        font-size: 15px;
+    }
+}
+
+.restaurant {
+    padding: 0em 1em 1em 1em;
+
+    figure img {
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 1em 1em 0em 0em;
+    }
+
+}
+
+
 
 .footer {
     background-color: #353535;
@@ -30,7 +125,6 @@ img
         }
 
         &__listline {
-            font-family: $font-text;
             font-size: 15px;
             line-height: 1.5em;
         }
