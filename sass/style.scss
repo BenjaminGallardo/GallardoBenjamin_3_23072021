@@ -2,6 +2,8 @@
 @import "./base/typography";
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./layout/header";
+@import "./layout/footer";
 
 @font-face {
     font-family: 'Shrikhand-Regular';
@@ -19,14 +21,8 @@ body
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    box-shadow: 0px 0px 10px #867c7c;
-    position: relative;
-    z-index: 1000;
+    @include header;    
 }
-
 
 .localisation {
     text-align: center;
@@ -54,22 +50,21 @@ body
         &__title {
             font-weight: bold;
             font-size: 20px;
+            width: 60%;
         }
 
         &__text {
             padding: 1em 0em 1em 0em;
             color: #545454;
+            width: 80%;
         }
 
         &__btn {
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            border-radius: 3em;
-            background-color: $color-primary;
-            padding: 1em 1em 1em 1em ;
-            cursor: pointer;
-            @include btn-shadow;
+            @include btn;
+
+            &:hover {
+                @include btn-hover
+            }
         }
 }
 
@@ -81,14 +76,34 @@ body
         font-size: 20px;
     }
 
+    &__list {
+        counter-reset: numberlist;
+    }
+
     &__listline {
        font-weight: bold;
-       margin: 1em 0em 1em 0em;
-       padding: 2em 1em 2em 1em;
+       margin: 1em 0.5em 1em 0.5em;
+       padding: 1em 1em 2em 1em;
        border-radius: 1em 1em 1em 1em;
        background-color: #f6f6f6;
        @include btn-shadow;
+       counter-increment: numberlist;
 
+       &::before {
+           content: counter(numberlist);
+           position: relative;
+           left: -2.2em;
+           top:1.2em;
+           border-radius: 50%;
+           background-color: $color-primary;
+           padding: 0.5em 0.7em 0.5em 0.7em;
+           font-size: 12px;
+           color: white;
+       }
+
+       &:hover {
+            border: 2px $color-secondary solid;
+        }
     }
 
     &__icon {
@@ -106,6 +121,15 @@ body
             color: black;
         }
 
+        &__new
+        {
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            border-radius: 0.3em;
+            background-color: $color-tertiary;  
+            padding: 0.5em;      }
+
         &__title {
             font-weight: bold;
             font-size: 20px;
@@ -115,6 +139,11 @@ body
         &__card {
             margin-bottom: 1em;
             position: relative;
+
+            &:hover {
+                transform: scale(1.02);
+                transition: 0.5s;
+            }
         }
 
         &__card img {
@@ -148,38 +177,12 @@ body
         }
 
         &__iconheart {
-            font-size: 2em;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
         }
     }
 
 .footer {
-    background-color: #353535;
-    color: $color-font-footer;
-    padding: 1em;
-    
-        &__title {
-            font-family: $font-title;
-            font-size: 20px;
-            padding-bottom: 1em;
-        }
-
-        &__listline {
-            font-size: 15px;
-            line-height: 1.5em;
-        }
-
-        &__icon {
-            width: 1em;
-            margin-right: 0.5em;
-        }
-
-        &__link {
-
-            text-decoration: none;
-            color: $color-font-footer;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    @include footer;
 }

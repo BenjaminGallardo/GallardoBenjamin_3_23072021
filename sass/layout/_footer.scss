@@ -1,0 +1,31 @@
+@mixin footer {
+    background-color: #353535;
+    color: $color-font-footer;
+    padding: 1em;
+    
+        &__title {
+            font-family: $font-title;
+            font-size: 20px;
+            padding-bottom: 1em;
+        }
+
+        &__listline {
+            font-size: 15px;
+            line-height: 1.5em;
+        }
+
+        &__icon {
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+        &__link {
+
+            text-decoration: none;
+            color: $color-font-footer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+}
