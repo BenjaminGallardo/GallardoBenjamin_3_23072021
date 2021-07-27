@@ -2,18 +2,10 @@
 @import "./base/typography";
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./layout/header";
 @import "./layout/footer";
 
-@font-face {
-    font-family: 'Shrikhand-Regular';
-    src: url('../polices/Shrikhand-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url('../polices/Roboto-Regular.ttf') format('truetype');
-}
 
 body
 {
@@ -104,7 +96,7 @@ body
        }
 
        &:hover {
-            border: 2px $color-secondary solid;
+            border: 2px $color-primary solid;
         }
     }
 
@@ -180,9 +172,9 @@ body
 
         &__iconheart {
             font-size: 1.5em;
-            position: relative;
-            z-index: 1;
+            cursor: pointer;
         }
+
     }
 
 .footer {
@@ -274,3 +266,4 @@ body
     }
 
 }
+
