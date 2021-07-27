@@ -1,3 +1,10 @@
-@keyframes loader {
-    
+@keyframes slide {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scalex(1);
+    }
 }
+

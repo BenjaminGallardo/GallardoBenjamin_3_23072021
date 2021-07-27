@@ -72,16 +72,19 @@ body
 
     &__list {
         counter-reset: numberlist;
+        height: 20em;
+
     }
 
     &__listline {
        font-weight: bold;
        margin: 1em 0.5em 1em 0.5em;
-       padding: 1em 1em 2em 1em;
+       padding: 1em 1em 1em 1em;
        border-radius: 1em 1em 1em 1em;
        background-color: #f6f6f6;
        @include btn-shadow;
        counter-increment: numberlist;
+       height: 3em;
 
        &::before {
            content: counter(numberlist);
@@ -96,6 +99,7 @@ body
        }
 
        &:hover {
+            height: calc(3em - 4px);
             border: 2px $color-primary solid;
         }
     }
