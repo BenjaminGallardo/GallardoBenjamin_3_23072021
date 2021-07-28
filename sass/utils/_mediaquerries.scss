@@ -38,11 +38,6 @@
         max-height: 18em;
     }
 
-    &__title {
-        justify-content: space-between;
-        padding: 0em 3em 1em 2em;
-        }
-
     &__responsive {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -96,11 +91,6 @@
         img {
             max-height: 20em;
         }
-    
-        &__title {
-            justify-content: space-between;
-            padding: 0em 3em 1em 2em;
-            }
     
         &__responsive {
             display: grid;
