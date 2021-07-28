@@ -1,10 +1,12 @@
-@keyframes slide {
+@keyframes apparition
+ {
     0% {
-        transform: scaleX(0);
+        transform: scale(0);
+        transform-origin: top left;
     }
 
     100% {
-        transform: scalex(1);
+        transform: scale(1);
     }
 }
 

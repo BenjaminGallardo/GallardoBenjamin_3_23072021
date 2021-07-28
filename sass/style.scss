@@ -281,6 +281,8 @@ body
             padding: 1em 1em 1em 1em;
             @include btn-shadow;
             position: relative;
+            animation-name: apparition;
+            animation-duration: 1000ms;
 
             p:first-child {
                 font-size: 18px;
@@ -302,7 +304,6 @@ body
             }
 
             &:hover {
-
                 .validation {
                     font-size: 35px;
                     background-color: #99e2d0;
@@ -315,12 +316,42 @@ body
                     align-items: center;
                     padding: 0.5em;
                     border-radius: 0em 0.4em 0.4em 0em;
-                }
-                
+                } 
             }
         }
     }
 
+    &__delay2 {
+        animation-delay: 0.2s;
+    }
+
+    &__delay3 {
+        animation-delay: 0.3s;
+    }
+
+    &__delay4 {
+        animation-delay: 0.4s;
+    }
+
+    &__delay5 {
+        animation-delay: 0.5s;
+    }
+
+    &__delay6 {
+        animation-delay: 0.6s;
+    }
+
+    &__delay7 {
+        animation-delay: 0.7s;
+    }
+
+    &__delay8 {
+        animation-delay: 0.8s;
+    }
+
+    &__delay9 {
+        animation-delay: 0.9s;
+    }
 
     &__price {
         font-weight: bold;
