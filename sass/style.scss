@@ -174,9 +174,25 @@ body
             top: 10.5em;
         }
 
-        &__iconheart {
+        &__iconsheart {
             font-size: 1.5em;
-            cursor: default;
+            cursor: pointer;
+
+            &:active {
+
+                color: $color-secondary;
+                transition: 250ms;
+
+                &::after {
+                    content: '\f004';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    font-size: 1.1em;
+                    position: absolute;
+                    bottom: -0.03em;
+                    left: -0.04em;
+                }
+            }
         }
 
     }
@@ -225,6 +241,31 @@ body
         h2 {
             font-family: $font-title;
             font-size: 25px;
+        }
+    }
+
+    &__heart {
+        position: relative;
+    }
+
+    &__iconheart {
+        font-size: 1.5em;
+        cursor: pointer;
+
+        &:active {
+
+            color: $color-secondary;
+            transition: 250ms;
+
+            &::after {
+                content: '\f004';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size: 1.1em;
+                position: absolute;
+                bottom: -0.03em;
+                left: -0.04em;
+            }
         }
     }
 
