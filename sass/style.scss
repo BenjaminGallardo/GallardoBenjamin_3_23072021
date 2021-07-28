@@ -258,11 +258,11 @@ body
     }
 
     &__price {
-        font-size: 16px;
         font-weight: bold;
         position: absolute;
         bottom:1em;
         right: 1em;
+        }
     }
 
     &__btn {
@@ -281,7 +281,7 @@ body
 
 /*Media Querries*/
 
-@media screen and (min-width: 1024px) and (max-width: 1920px) /*Version Desktop & Tablette*/
+@media screen and (min-width: 1024px) and (max-width: 1920px) /*Version Desktop & Tablette Portrait*/
 {
 
 .functioning {
