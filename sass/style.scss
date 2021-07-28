@@ -177,7 +177,7 @@ body
 
         &__iconheart {
             font-size: 1.5em;
-            cursor: pointer;
+            cursor: default;
         }
 
     }
@@ -187,7 +187,7 @@ body
 }
 
 /* Fin de la page index*/
-/*Début de la page lapalettedugout*/
+/*Début des pages annexes*/
 
 .cardmenu {
 
@@ -264,7 +264,6 @@ body
         bottom:1em;
         right: 1em;
         }
-    }
 
     &__btn {
         @include btn;
@@ -279,3 +278,5 @@ body
     }
 
 }
+
+/*Fin des pages annexes*/
