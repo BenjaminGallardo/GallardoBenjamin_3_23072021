@@ -12,6 +12,10 @@
         &__listline {
             font-size: 15px;
             line-height: 1.5em;
+
+            @media screen and (min-width: 700px) and (max-width: 1600px){
+                display: flex;
+            }
         }
 
         &__icon {

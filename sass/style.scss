@@ -238,23 +238,31 @@ body
             margin: 1em 0em 1em 0em;
             padding: 1em 1em 1em 1em;
             @include btn-shadow;
+            position: relative;
 
             p:first-child {
                 font-size: 18px;
                 font-weight: bold;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
 
-            p:last-child {
-                display: flex;
-                justify-content: space-between;
+            p:nth-child(2) {
                 font-size: 14px;
-            }
-
-            em {
-                font-size: 16px;
-                font-weight: bold;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         }
+    }
+
+    &__price {
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        bottom:1em;
+        right: 1em;
     }
 
     &__btn {
@@ -273,7 +281,7 @@ body
 
 /*Media Querries*/
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) /*Version Desktop*/
+@media screen and (min-width: 1024px) and (max-width: 1920px) /*Version Desktop & Tablette*/
 {
 
 .functioning {
@@ -297,12 +305,94 @@ body
     padding: 0em 1em 1em 1em;
 
     &__cardlisting {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
         }
 
     &__card {
-        margin: 0em 1em 1em 1em;
-        width: 100%;
+        margin: 0;
         }
+    }
+
+.cardmenu {
+
+    img {
+        max-height: 18em;
+    }
+
+    &__title {
+        justify-content: space-between;
+        padding: 0em 3em 1em 2em;
+        }
+
+    &__responsive {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__btn {
+        width: 20%;
+    }
+}
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2600px) {
+    
+    body {
+    margin: 0em 20em 0em 20em;
+    }
+
+    .functioning {
+
+        &__list {
+            height: 7em; 
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &__listline {
+           width: 100%;
+    
+           &:hover {
+                width: calc(100% - 15px);
+            }
+        }
+    }
+    
+    .restaurant {
+        padding: 0em 1em 1em 1em;
+    
+        &__cardlisting {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            }
+    
+        &__card {
+            margin: 0;
+            }
+        }
+    
+    .cardmenu {
+
+        img {
+            max-height: 20em;
+        }
+    
+        &__title {
+            justify-content: space-between;
+            padding: 0em 3em 1em 2em;
+            }
+    
+        &__responsive {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    
+        &__btn {
+            width: 20%;
+        }
+    
     }
 }
