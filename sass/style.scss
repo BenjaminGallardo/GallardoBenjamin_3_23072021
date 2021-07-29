@@ -228,7 +228,11 @@ body
         
     h3 {
         font-size: 15px;
-        text-decoration: underline $color-tertiary 3px;
+    }
+
+    em {
+        border-bottom: solid $color-tertiary 3px;
+        padding-bottom: 0.4em;
     }
 
     }
