@@ -1,15 +1,15 @@
 @mixin header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    box-shadow: 0px 0px 10px #867c7c;
-    position: relative;
-    z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 0px 0px 10px #867c7c;
+  position: relative;
+  z-index: 100;
 
-    &__return {
-        position: absolute;
-        left: 2em;
-        font-size: 20px;
-    }
+  &__return {
+    position: absolute;
+    left: 2em;
+    font-size: 20px;
+  }
 }

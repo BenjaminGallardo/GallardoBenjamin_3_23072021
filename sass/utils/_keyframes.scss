@@ -1,11 +1,18 @@
-@keyframes menu-animation
- {
-    0% {
-        transform: translateY(-1000px);
-    }
+@-webkit-keyframes menu-animation {
+  0% {
+    transform: translateY(-1000px);
+  }
 
-    100% {
-        transform: translateY(0px);
-    }
+  100% {
+    transform: translateY(0px);
+  }
 }
+@keyframes menu-animation {
+  0% {
+    transform: translateY(-1000px);
+  }
 
+  100% {
+    transform: translateY(0px);
+  }
+}
