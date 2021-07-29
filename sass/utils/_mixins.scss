@@ -35,47 +35,47 @@
 }
 
 @mixin menu-animation {
-  &__delay2 {
+  &--delay2 {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
   }
 
-  &__delay3 {
+  &--delay3 {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
   }
 
-  &__delay4 {
+  &--delay4 {
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
   }
 
-  &__delay5 {
+  &--delay5 {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
   }
 
-  &__delay6 {
+  &--delay6 {
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
   }
 
-  &__delay7 {
+  &--delay7 {
     -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
   }
 
-  &__delay8 {
+  &--delay8 {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
   }
 
-  &__delay9 {
+  &--delay9 {
     -webkit-animation-delay: 0.9s;
     animation-delay: 0.9s;
   }
 
-  &__delay10 {
+  &--delay10 {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
   }
