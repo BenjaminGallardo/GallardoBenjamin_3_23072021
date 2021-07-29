@@ -33,3 +33,42 @@
         background-color: lighten($color: $color-primary, $amount: 10%);
     }   
 }
+
+@mixin menu-animation {
+    &__delay2 {
+        animation-delay: 0.2s;
+    }
+
+    &__delay3 {
+        animation-delay: 0.3s;
+    }
+
+    &__delay4 {
+        animation-delay: 0.4s;
+    }
+
+    &__delay5 {
+        animation-delay: 0.5s;
+    }
+
+    &__delay6 {
+        animation-delay: 0.6s;
+    }
+
+    &__delay7 {
+        animation-delay: 0.7s;
+    }
+
+    &__delay8 {
+        animation-delay: 0.8s;
+    }
+
+    &__delay9 {
+        animation-delay: 0.9s;
+    }
+
+    &__delay10 {
+        animation-delay: 1s;
+    }
+    
+}
