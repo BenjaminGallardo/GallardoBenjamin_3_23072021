@@ -13,6 +13,94 @@ body {
 
 /*Début de la page index.html*/
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-animation: loader-stop 5s both;
+          animation: loader-stop 5s both;
+
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Shrikhand-Regular";
+  }
+}
+
+.loader {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: black 30px solid;
+  position: absolute;
+  -webkit-animation: loader-animation 2s ease-in-out 2 both;
+          animation: loader-animation 2s ease-in-out 2 both;
+
+  &__stars1 {
+    color: white;
+    position: absolute; /*Etoile centrée à droite*/
+    right: -1.5em;
+    bottom: 7em;
+  }
+
+  &__stars2 {
+    color: white;
+    position: absolute; /*Etoile du dessus*/
+    top: -1.5em;
+    left: 7em;
+  }
+
+  &__stars3 {
+    color: white;
+    position: absolute; /*Etoile centrée au centre*/
+    left: -1.5em;
+    bottom: 7em;
+  }
+
+  &__stars4 {
+    color: white;
+    position: absolute; /*Etoile centrée au centre*/
+    bottom: -1.5em;
+    left: 7em;
+  }
+
+  &__utensils1 {
+    color: white;
+    position: absolute; /*A droite*/
+    top: 1em;
+    right: 1.3em;
+  }
+
+  &__utensils2 {
+    color: white;
+    position: absolute; /*Etoile de gauche au dessus du centre*/
+    top: 1em;
+    left: 1.3em;
+  }
+
+  &__utensils3 {
+    color: white;
+    position: absolute; /*Etoile de gauche en bas du centre*/
+    bottom: 1em;
+    left: 1.3em;
+  }
+
+  &__utensils4 {
+    color: white;
+    position: absolute; /*Etoile de gauche au dessus du centre*/
+    bottom: 1em;
+    right: 1.3em;
+  }
+}
+
 .header {
   @include header;
 }
@@ -79,6 +167,7 @@ body {
     @include btn-shadow;
     counter-increment: numberlist;
     height: 3em;
+    cursor: pointer;
 
     &::before {
       content: counter(numberlist);
@@ -141,7 +230,8 @@ body {
   &__card img {
     height: 9em;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     overflow: hidden;
     border-radius: 1em 1em 0em 0em;
   }
@@ -203,7 +293,8 @@ body {
     width: 100%;
     height: 100%;
     max-height: 14em;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
     z-index: 2;
   }
@@ -273,8 +364,10 @@ body {
       padding: 1em 1em 1em 1em;
       @include btn-shadow;
       position: relative;
-      animation-name: menu-animation;
-      animation-duration: 1000ms;
+      -webkit-animation-name: menu-animation;
+              animation-name: menu-animation;
+      -webkit-animation-duration: 1000ms;
+              animation-duration: 1000ms;
 
       p:first-child {
         font-size: 18px;
