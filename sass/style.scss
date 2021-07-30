@@ -366,8 +366,8 @@ body {
       position: relative;
       -webkit-animation-name: menu-animation;
               animation-name: menu-animation;
-      -webkit-animation-duration: 1000ms;
-              animation-duration: 1000ms;
+      -webkit-animation-duration: 2000ms;
+              animation-duration: 2000ms;
 
       p:first-child {
         font-size: 18px;
@@ -401,6 +401,12 @@ body {
           align-items: center;
           padding: 0.5em;
           border-radius: 0em 0.4em 0.4em 0em;
+          animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+
+        .valid {
+          animation: rotation 0.4s linear both;
+          animation-direction: reverse;
         }
       }
     }
