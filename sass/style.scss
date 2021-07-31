@@ -32,6 +32,15 @@ body {
     font-size: 40px;
     font-weight: bold;
     font-family: "Shrikhand-Regular";
+    color:$color-primary;
+
+    em {
+      color: $color-secondary;
+    }
+
+    span {
+      color: $color-tertiary;
+    }
   }
 }
 
@@ -45,56 +54,56 @@ body {
           animation: loader-animation 2s ease-in-out 2 both;
 
   &__stars1 {
-    color: white;
+    color: $color-stars;
     position: absolute; /*Etoile centrée à droite*/
     right: -1.5em;
     bottom: 7em;
   }
 
   &__stars2 {
-    color: white;
+    color: $color-stars;
     position: absolute; /*Etoile du dessus*/
     top: -1.5em;
     left: 7em;
   }
 
   &__stars3 {
-    color: white;
+    color: $color-stars;
     position: absolute; /*Etoile centrée au centre*/
     left: -1.5em;
     bottom: 7em;
   }
 
   &__stars4 {
-    color: white;
+    color: $color-stars;
     position: absolute; /*Etoile centrée au centre*/
     bottom: -1.5em;
     left: 7em;
   }
 
   &__utensils1 {
-    color: white;
+    color: $color-utensils;
     position: absolute; /*A droite*/
     top: 1em;
     right: 1.3em;
   }
 
   &__utensils2 {
-    color: white;
+    color: $color-utensils;
     position: absolute; /*Etoile de gauche au dessus du centre*/
     top: 1em;
     left: 1.3em;
   }
 
   &__utensils3 {
-    color: white;
+    color: $color-utensils;
     position: absolute; /*Etoile de gauche en bas du centre*/
     bottom: 1em;
     left: 1.3em;
   }
 
   &__utensils4 {
-    color: white;
+    color: $color-utensils;
     position: absolute; /*Etoile de gauche au dessus du centre*/
     bottom: 1em;
     right: 1.3em;
