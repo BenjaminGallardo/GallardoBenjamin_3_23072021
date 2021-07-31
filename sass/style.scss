@@ -29,7 +29,7 @@ body {
           animation: loader-stop 5s both;
 
   h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     font-family: "Shrikhand-Regular";
     color:$color-primary;
@@ -45,68 +45,69 @@ body {
 }
 
 .loader {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   border: black 30px solid;
   position: absolute;
   -webkit-animation: loader-animation 2s ease-in-out 2 both;
-          animation: loader-animation 2s ease-in-out 2 both;
+  animation: loader-animation 2s ease-in-out 2 both;
+
 
   &__stars1 {
     color: $color-stars;
     position: absolute; /*Etoile centrée à droite*/
-    right: -1.5em;
-    bottom: 7em;
+    right: -1.4em;
+    bottom: 6em;
   }
 
   &__stars2 {
-    color: $color-stars;
+    color: $color-stars2;
     position: absolute; /*Etoile du dessus*/
-    top: -1.5em;
-    left: 7em;
+    top: -1.4em;
+    left: 5.6em;
   }
 
   &__stars3 {
     color: $color-stars;
-    position: absolute; /*Etoile centrée au centre*/
-    left: -1.5em;
-    bottom: 7em;
+    position: absolute; /*Etoile centrée au gauche*/
+    left: -1.4em;
+    bottom: 6em;
   }
 
   &__stars4 {
-    color: $color-stars;
-    position: absolute; /*Etoile centrée au centre*/
-    bottom: -1.5em;
-    left: 7em;
+    color: $color-stars2;
+    position: absolute; /*Etoile centrée en bas*/
+    bottom: -1.4em;
+    left: 5.6em;
   }
 
   &__utensils1 {
     color: $color-utensils;
     position: absolute; /*A droite*/
-    top: 1em;
-    right: 1.3em;
+    top: 0.5em;
+    right: 1em;
   }
 
   &__utensils2 {
     color: $color-utensils;
     position: absolute; /*Etoile de gauche au dessus du centre*/
-    top: 1em;
-    left: 1.3em;
+    top: 0.5em;
+    left: 1em;
   }
 
   &__utensils3 {
     color: $color-utensils;
     position: absolute; /*Etoile de gauche en bas du centre*/
-    bottom: 1em;
-    left: 1.3em;
+    bottom: 0.5em;
+    left: 1em;
   }
 
   &__utensils4 {
     color: $color-utensils;
     position: absolute; /*Etoile de gauche au dessus du centre*/
-    bottom: 1em;
-    right: 1.3em;
+    bottom: 0.5em;
+    right: 1em;
   }
 }
 
