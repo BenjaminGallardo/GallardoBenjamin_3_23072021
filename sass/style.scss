@@ -375,10 +375,12 @@ body {
       position: relative;
       display: flex;
       justify-content: space-between;
-      -webkit-animation-name: menu-animation;
-              animation-name: menu-animation;
+      -webkit-animation-name: menu-animation back;
+      animation-name: menu-animation;
       -webkit-animation-duration: 2000ms;
-              animation-duration: 2000ms;
+      animation-duration: 2000ms;
+      animation-fill-mode: both;
+      opacity: 0;
 
       p:first-child {
         font-size: 18px;
