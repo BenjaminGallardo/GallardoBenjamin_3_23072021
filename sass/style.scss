@@ -373,6 +373,8 @@ body {
       padding: 1em 1em 1em 1em;
       @include btn-shadow;
       position: relative;
+      display: flex;
+      justify-content: space-between;
       -webkit-animation-name: menu-animation;
               animation-name: menu-animation;
       -webkit-animation-duration: 2000ms;
@@ -388,9 +390,9 @@ body {
 
       p:nth-child(2) {
         font-size: 14px;
-        overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       .validation {
@@ -423,17 +425,20 @@ body {
 
   @include menu-animation;
 
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__price {
-    font-weight: bold;
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   &__btn {
     @include btn;
     margin: auto;
-    width: 40%;
     text-align: center;
     margin-top: 2em;
 
