@@ -38,10 +38,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
-
-    &__btn {
-      width: 20%;
-    }
   }
 }
 
@@ -88,10 +84,6 @@
     &__responsive {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    &__btn {
-      width: 20%;
     }
   }
 }

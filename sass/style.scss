@@ -449,6 +449,7 @@ body {
     margin: auto;
     text-align: center;
     margin-top: 2em;
+    width: 30%;
 
     &:hover {
       @include btn-hover;
