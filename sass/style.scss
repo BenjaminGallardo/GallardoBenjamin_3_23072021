@@ -425,7 +425,7 @@ body {
     }
   }
 
-  @for $i from 1 to 10 {
+  @for $i from 0 to 10 {
     &--delay#{$i}{
       animation-delay:$i * 0.2s;
     }
