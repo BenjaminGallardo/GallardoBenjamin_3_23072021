@@ -374,12 +374,13 @@ body {
       padding: 1em 1em 1em 1em;
       @include btn-shadow;
       position: relative;
+      display: flex;
+      justify-content: space-between;
       -webkit-animation-name: menu-animation back;
       animation-name: menu-animation;
       -webkit-animation-duration: 2000ms;
       animation-duration: 2000ms;
-      -webkit-animation-fill-mode: both;
-              animation-fill-mode: both;
+      animation-fill-mode: both;
       opacity: 0;
 
       p:first-child {
@@ -414,13 +415,11 @@ body {
           align-items: center;
           padding: 0.5em;
           border-radius: 0em 0.4em 0.4em 0em;
-          -webkit-animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-                  animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
         }
 
         .valid {
-          -webkit-animation: rotation 0.4s linear both;
-                  animation: rotation 0.4s linear both;
+          animation: rotation 0.4s linear both;
           animation-direction: reverse;
         }
       }
@@ -429,10 +428,16 @@ body {
 
   @include menu-animation;
 
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__price {
-    position: absolute;
-    bottom: 1em;
-    right: 1em
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
   }
 
   &__btn {
@@ -440,7 +445,6 @@ body {
     margin: auto;
     text-align: center;
     margin-top: 2em;
-    width: 40%;
 
     &:hover {
       @include btn-hover;
