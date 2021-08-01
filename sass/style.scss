@@ -419,14 +419,17 @@ body {
         }
 
         .valid {
-          animation: rotation 0.4s linear both;
-          animation-direction: reverse;
+          animation: rotation 0.4s linear reverse both;
         }
       }
     }
   }
 
-  @include menu-animation;
+  @for $i from 1 to 10 {
+    &--delay#{$i}{
+      animation-delay:$i * 0.2s;
+    }
+  }
 
   &__text {
     display: flex;
