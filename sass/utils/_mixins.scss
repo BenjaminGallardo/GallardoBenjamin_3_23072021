@@ -3,7 +3,7 @@
   font-weight: bold;
   color: white;
   border-radius: 3em;
-  background: $color-primary;
+  background: linear-gradient(to top,#9356dc,#ff79da);
   padding: 1em 1em 1em 1em;
   cursor: pointer;
   @include btn-shadow;
