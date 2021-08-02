@@ -81,9 +81,10 @@
 
 @-webkit-keyframes slide-left {
   0% {
-    transform: sclaeX(0);
+    transform: scaleX(0);
     transform-origin: right;
   }
+  
   100% {
     transform: scaleX(-100px);
     transform-origin: right;
