@@ -11,9 +11,9 @@ body {
   font-family: $font-text;
 }
 
-/*Début de la page index.html*/
+/*Début du loader*/
 
-.container {
+.containerloader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,8 +25,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-animation: loader-stop 5s both;
-          animation: loader-stop 5s both;
+  -webkit-animation: loader-stop 4s both;
+          animation: loader-stop 4s both;
 
   h2 {
     font-size: 30px;
@@ -47,8 +47,8 @@ body {
 .loader {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
   border: black 30px solid;
+  border-radius: 50%;
   position: absolute;
   -webkit-animation: loader-animation 2s ease-in-out 2 both;
   animation: loader-animation 2s ease-in-out 2 both;
@@ -110,6 +110,8 @@ body {
     right: 1em;
   }
 }
+/*Fin du loader*/
+/*Début de la page index.html*/
 
 .header {
   @include header;
@@ -296,7 +298,7 @@ body {
 /* Fin de la page index*/
 /*Début des pages annexes*/
 
-.cardmenu {
+.menu {
   background-color: #f6f6f6;
 
   img {
@@ -308,8 +310,8 @@ body {
     position: relative;
     z-index: 2;
   }
-
-  &__description {
+  
+  .contentmenu {
     border-radius: 3em 3em 0em 0em;
     background-color: #f6f6f6;
     padding: 2em 0em 1em 0em;
@@ -317,146 +319,140 @@ body {
     bottom: 3em;
     z-index: 3;
 
-    h3 {
-      font-size: 15px;
-    }
-
-    em {
-      border-bottom: solid $color-tertiary 3px;
-      padding-bottom: 0.4em;
-    }
-  }
-
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0em 2em 0em 1em;
-
-    h2 {
-      font-family: $font-title;
-      font-size: 25px;
-    }
-  }
-
-  &__heart {
-    position: relative;
-  }
-
-  &__iconheart {
-    font-size: 1.5em;
-    cursor: pointer;
-
-    &:hover {
-      color: $color-secondary;
-      transition: 250ms;
-
-      &::after {
-        content: "\f004";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 1.1em;
-        position: absolute;
-        bottom: -0.03em;
-        left: -0.04em;
-      }
-    }
-  }
-
-  &__meal {
-    padding: 1em 1em 1em 1em;
-    line-height: 1.7em;
-
-    li {
-      background-color: white;
-      border-radius: 1em 1em 1em 1em;
-      margin: 1em 0em 0em 0em;
-      padding: 1em 0em 1em 0em;
-      @include btn-shadow;
-      position: relative;
+    .title {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      -webkit-animation-name: menu-animation back;
-      animation-name: menu-animation;
-      -webkit-animation-duration: 2000ms;
-      animation-duration: 2000ms;
-      animation-fill-mode: both;
-      opacity: 0;
+      padding: 0em 2em 0em 1em;
 
-      p:first-child {
-        font-size: 18px;
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+      h2 {
+        font-family: $font-title;
+        font-size: 25px;
       }
 
-      p:nth-child(2) {
-        font-size: 14px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+      &__heart {
+        position: relative;
+      }
+    
+      &__iconheart {
+        font-size: 1.5em;
+        cursor: pointer;
+    
+        &:hover {
+          color: $color-secondary;
+          transition: 250ms;
+    
+          &::after {
+            content: "\f004";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 1.1em;
+            position: absolute;
+            bottom: -0.03em;
+            left: -0.04em;
+          }
+        }
+      }
+    }
+
+    .cardmenu {
+      padding: 1em 1em 1em 1em;
+      line-height: 1.7em;
+
+      h3 {
+        font-size: 15px;
+      }
+  
+      em {
+        border-bottom: solid $color-tertiary 3px;
+        padding-bottom: 0.4em;
       }
 
-      .validation {
-        font-size: 35px;
-        background-color: #99e2d0;
-        color: white;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
+      .cardlistline {
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        margin: 1em 0em 0em 0em;
+        padding: 1em 0em 1em 0em;
+        @include btn-shadow;
+        position: relative;
         display: flex;
-        align-items: center;
-        padding: 0.5em;
-        border-radius: 0em 0.4em 0.4em 0em;
-        animation: slide-return 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        justify-content: space-between;
+        animation: menu-animation 2000ms backwards;
+
+        &__meal {
+          display: flex;
+          flex-direction: column;
+          padding-left: 0.5em;
+          white-space: nowrap;
+          flex-wrap: nowrap;
+          overflow: hidden;
+
+          .mealname {
+            font-size: 18px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          .mealside {
+            font-size: 14px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+
+        &__price {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 0em 0.5em 0em 0.5em;
+          font-weight: bold;
+        }
+
+        &__validation {
+          font-size: 35px;
+          background-color: #99e2d0;
+          color: white;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          padding: 0.5em;
+          border-radius: 0em 0.4em 0.4em 0em;
+          animation: slide-return 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+
+        &:hover {
+          .cardlistline__validation {
+            animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          }
+
+          .valid {
+            animation: rotation 0.4s linear reverse both;
+          }
+        }
       }
 
+      @for $i from 0 to 10 {
+        .delay#{$i}{
+          animation-delay:$i * 0.2s;
+        }
+      }
+
+    }
+    &__btn {
+      @include btn;
+      margin: auto;
+      text-align: center;
+      margin-top: 2em;
+      width: 30%;
+      max-width: 10em;
+  
       &:hover {
-        .validation {
-          animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        }
-
-        .valid {
-          animation: rotation 0.4s linear reverse both;
-        }
+        @include btn-hover;
       }
-    }
-  }
-
-  @for $i from 0 to 10 {
-    &--delay#{$i}{
-      animation-delay:$i * 0.2s;
-    }
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0.5em;
-    flex-wrap: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &__price {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0em 0.5em 0em 0.5em;
-  }
-
-  &__btn {
-    @include btn;
-    margin: auto;
-    text-align: center;
-    margin-top: 2em;
-    width: 30%;
-    max-width: 10em;
-
-    &:hover {
-      @include btn-hover;
     }
   }
 }

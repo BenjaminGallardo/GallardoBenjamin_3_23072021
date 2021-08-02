@@ -29,19 +29,19 @@
     }
   }
 
-  .cardmenu {
+  .menu {
     img {
       max-height: 18em;
     }
 
-    &__responsive {
+    .responsive {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
 
-@media screen and (min-width: 1921px) and (max-width: 2600px) {
+@media screen and (min-width: 1921px) and (max-width: 3840px) {
   body {
     margin: 0em 20em 0em 20em;
   }
@@ -76,12 +76,12 @@
     }
   }
 
-  .cardmenu {
+  .menu {
     img {
       max-height: 20em;
     }
 
-    &__responsive {
+    .responsive {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
