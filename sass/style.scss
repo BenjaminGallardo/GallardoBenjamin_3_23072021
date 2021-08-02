@@ -272,7 +272,7 @@ body {
     font-size: 1.5em;
     cursor: pointer;
 
-    &:active {
+    &:hover {
       color: $color-secondary;
       transition: 250ms;
 
@@ -347,7 +347,7 @@ body {
     font-size: 1.5em;
     cursor: pointer;
 
-    &:active {
+    &:hover {
       color: $color-secondary;
       transition: 250ms;
 
