@@ -425,6 +425,9 @@ body {
         }
 
         &:hover {
+          padding-right: 80px;
+          transition: 0.4s padding cubic-bezier(0.550, 0.085, 0.680, 0.530);
+
           .cardlistline__validation {
             animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
           }

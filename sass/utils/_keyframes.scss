@@ -129,14 +129,3 @@
     transform: rotate(360deg);
   }
 }
-
-@keyframes slide-price {
-  0% {
-    transform: translateX(0);
-    transform-origin: right;
-  }
-  100% {
-    transform: translateX(-80px);
-    transform-origin: right;
-  }
-}
