@@ -405,7 +405,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          padding: 0em 0.5em 0em 0.5em;
+          padding: 0em 0.5em 0em 0em;
           font-weight: bold;
         }
 
@@ -425,8 +425,8 @@ body {
         }
 
         &:hover {
-          padding-right: 80px;
-          transition: 0.4s padding cubic-bezier(0.550, 0.085, 0.680, 0.530);
+          padding-right: 70px;
+          transition: padding 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530);
 
           .cardlistline__validation {
             animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
