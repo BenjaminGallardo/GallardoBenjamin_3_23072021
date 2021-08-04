@@ -439,7 +439,8 @@ body {
 
         &:not(:hover){
           .cardlistline__price {
-          animation: slide-price 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530);}
+          animation: slide-price 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530); /*slide du retour prix*/
+          }
         }
       }
 
