@@ -421,20 +421,25 @@ body {
           align-items: center;
           padding: 0.5em;
           border-radius: 0em 0.4em 0.4em 0em;
-          animation: slide-return 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: slide-return 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
         }
 
         &:hover {
           padding-right: 70px;
-          transition: padding 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530); /*Permet de décalé la div du prix pour mettre en suspension le texte*/
+          transition: padding 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530); /*Permet de décalé la div du prix pour mettre en suspension le texte*/
 
           .cardlistline__validation {
-            animation: slide-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; /*Slide sur le côté de la div du validé*/
+            animation: slide-left 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; /*Slide sur le côté de la div du validé*/
           }
 
           .valid {
-            animation: rotation 0.4s linear reverse both;  /*Fait tourner le validé en hover*/
+            animation: rotation 0.3s linear reverse both;  /*Fait tourner le validé en hover*/
           }
+        }
+
+        &:not(:hover){
+          .cardlistline__price {
+          animation: slide-price 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530);}
         }
       }
 
