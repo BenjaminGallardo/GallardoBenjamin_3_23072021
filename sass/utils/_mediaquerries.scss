@@ -1,4 +1,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1440px) /*Version Desktop & Tablette Portrait*/ {
+
+/*Début des Medias de la page index*/
+
   .functioning {
     &__list {
       height: 7em;
@@ -28,6 +31,9 @@
       margin: 0;
     }
   }
+
+/*Fin des Medias de la page index*/
+/*Début des Medias des pages menus*/
 
   .menu {
     img {
@@ -41,8 +47,11 @@
   }
 }
 
+/*Fin des Medias des pages menus*/
+
 @media screen and (min-width: 1441px) and (max-width: 3840px) {
 
+/*Début des Medias de la page index*/
 
   .functioning {
     margin: 0em 20em 0em 20em;
@@ -77,6 +86,9 @@
       margin: 0;
     }
   }
+
+/*Fin des Medias de la page index*/
+/*Début des Medias des pages menus*/
 
   .menu {
 
@@ -94,3 +106,5 @@
     }
   }
 }
+
+ /*Fin des Medias des pages menus*/
